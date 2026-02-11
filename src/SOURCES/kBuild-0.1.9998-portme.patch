@@ -1,3 +1,9 @@
+# Only used on el6
+# Found the reason why compile fails in detection of powerpc64 in centos 6
+# kBuild/src/lib/kStuff/include/k/kDefs.h:356:4: error: #error "Port Me or define K_ENDIAN."
+# hack for gcc < 4.6 and ppc64 only
+# https://stackoverflow.com/a/40675229/778517
+
 --- kBuild/src/lib/kStuff/include/k/kDefs.h.orig	2018-05-12 03:35:13.703342877 +0100
 +++ kBuild/src/lib/kStuff/include/k/kDefs.h	2018-05-12 04:24:52.034917011 +0100
 @@ -336,16 +336,19 @@

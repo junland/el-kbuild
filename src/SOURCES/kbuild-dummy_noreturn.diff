@@ -11,28 +11,3 @@ Index: src/kmk/kmkbuiltin/expr.c
  	}
  	/* NOTREACHED */
  }
-Index: src/kmk/kmkbuiltin/kbuild_protection.c
-===================================================================
---- ./src/kmk/kmkbuiltin/kbuild_protection.c.orig
-+++ ./src/kmk/kmkbuiltin/kbuild_protection.c
-@@ -29,6 +29,7 @@
- #include "config.h"
- #include <sys/types.h>
- #include <stdlib.h>
-+#include <unistd.h>
- #include <string.h>
- #include <ctype.h>
- #include <assert.h>
-# Fix one implicit-function-declaration
-Index: src/sed/lib/utils.c
-===================================================================
---- ./src/sed/lib/utils.c	(revision 3127)
-+++ ./src/sed/lib/utils.c	(working copy)
-@@ -19,6 +19,7 @@
- #include "config.h"
- 
- #include <stdio.h>
-+#include <unistd.h>
- 
- #include <errno.h>
- #ifndef errno
