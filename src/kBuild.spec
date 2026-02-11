@@ -17,6 +17,9 @@ Patch1:         kBuild-pthread.patch
 Patch6:         kbuild-dummy_noreturn.diff
 Patch8:         kBuild-0.1.9998-portme.patch
 Patch10:        assert.patch
+Patch11:        kBuild-eval_buffer.patch
+Patch12:        kBuild-sed-implicit-decl.patch
+Patch13:        kBuild-c23.patch
 
 BuildRequires:  make
 BuildRequires:  gcc
@@ -54,6 +57,9 @@ repository.
 %endif
 %endif
 %patch -P 10 -p1 -b .portme3
+%patch -P 11 -p1 -b .eval_buffer
+%patch -P 12 -p1 -b .sed_implicit_decl
+%patch -P 13 -p1 -b .c23
 
 
 %build

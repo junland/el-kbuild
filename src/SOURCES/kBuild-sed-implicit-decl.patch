@@ -1,0 +1,55 @@
+diff -Nurp a/src/sed/lib/getline.c b/src/sed/lib/getline.c
+--- a/src/sed/lib/getline.c	2022-10-24 14:09:52.000000000 +0000
++++ b/src/sed/lib/getline.c	2026-02-11 20:48:11.421260415 +0000
+@@ -11,6 +11,7 @@
+ 
+ #ifdef HAVE_STRINGS_H
+ # include <strings.h>
++# include <string.h>
+ #else
+ # include <string.h>
+ #endif /* HAVE_STRINGS_H */
+diff -Nurp a/src/sed/lib/mkstemp.c b/src/sed/lib/mkstemp.c
+--- a/src/sed/lib/mkstemp.c	2022-10-24 14:09:52.000000000 +0000
++++ b/src/sed/lib/mkstemp.c	2026-02-11 20:48:11.419260416 +0000
+@@ -4,6 +4,7 @@
+ 
+ #ifdef HAVE_STRINGS_H
+ # include <strings.h>
++# include <string.h>
+ #else
+ # include <string.h>
+ #endif /* HAVE_STRINGS_H */
+diff -Nurp a/src/sed/lib/utils.c b/src/sed/lib/utils.c
+--- a/src/sed/lib/utils.c	2022-10-24 14:09:52.000000000 +0000
++++ b/src/sed/lib/utils.c	2026-02-11 20:48:11.417260418 +0000
+@@ -27,6 +27,7 @@
+ 
+ #ifdef HAVE_STRINGS_H
+ # include <strings.h>
++# include <string.h>
+ #else
+ # include <string.h>
+ #endif /* HAVE_STRINGS_H */
+diff -Nurp a/src/sed/sed/compile.c b/src/sed/sed/compile.c
+--- a/src/sed/sed/compile.c	2022-10-24 14:09:52.000000000 +0000
++++ b/src/sed/sed/compile.c	2026-02-11 20:48:11.423260413 +0000
+@@ -25,6 +25,7 @@
+ 
+ #ifdef HAVE_STRINGS_H
+ # include <strings.h>
++# include <string.h>
+ # ifdef HAVE_MEMORY_H
+ #  include <memory.h>
+ # endif
+diff -Nurp a/src/sed/sed/execute.c b/src/sed/sed/execute.c
+--- a/src/sed/sed/execute.c	2022-10-24 14:09:52.000000000 +0000
++++ b/src/sed/sed/execute.c	2026-02-11 20:48:11.425260412 +0000
+@@ -46,6 +46,7 @@ extern int errno;
+ 
+ #ifdef HAVE_STRINGS_H
+ # include <strings.h>
++# include <string.h>
+ #else
+ # include <string.h>
+ #endif /*HAVE_STRINGS_H*/
