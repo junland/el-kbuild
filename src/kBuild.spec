@@ -15,8 +15,7 @@ Source0:        kBuild-r%{svn_revision}.%{svn_date}.tar.gz
 Patch0:         kBuild-0.1.3-escape.patch
 Patch1:         kBuild-pthread.patch
 Patch2:         kbuild-dummy_noreturn.diff
-Patch3:         kBuild-0.1.9998-portme.patch
-Patch4:         assert.patch
+Patch3:         assert.patch
 
 BuildRequires:  make
 BuildRequires:  gcc
@@ -44,7 +43,7 @@ repository.
 %patch -P 0 -p1 -b .escape
 %patch -P 1 -p1 -b .pthreads
 %patch -P 2 -p1 -b .dummy_noreturn
-%patch -P 3 -p1 -b .portme3
+%patch -P 3 -p1 -b .assert
 
 
 %build
