@@ -1,5 +1,5 @@
-%global svn_revision 3572
-%global svn_date 20221024
+%global svn_revision 3674
+%global svn_date 20250422
 
 Name:           kBuild
 Version:        0.1.9998%{?svn_revision:.r%{svn_revision}}
