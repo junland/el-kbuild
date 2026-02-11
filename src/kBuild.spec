@@ -14,11 +14,9 @@ URL:            http://svn.netlabs.org/kbuild
 Source0:        kBuild-r%{svn_revision}.%{svn_date}.tar.gz
 Patch0:         kBuild-0.1.3-escape.patch
 Patch1:         kBuild-pthread.patch
-Patch6:         kbuild-dummy_noreturn.diff
-Patch8:         kBuild-0.1.9998-portme.patch
-Patch10:        assert.patch
-Patch11:        kBuild-eval_buffer.patch
-Patch12:        kBuild-sed-implicit-decl.patch
+Patch2:         kbuild-dummy_noreturn.diff
+Patch3:         kBuild-0.1.9998-portme.patch
+Patch4:         assert.patch
 
 BuildRequires:  make
 BuildRequires:  gcc
@@ -45,19 +43,8 @@ repository.
 %setup -q -n %{name}
 %patch -P 0 -p1 -b .escape
 %patch -P 1 -p1 -b .pthreads
-%patch -P 6 -p1 -b .dummy_noreturn
-%ifarch ppc64
-%if 0%{?rhel} && 0%{?rhel} < 7
-# Found the reason why compile fails in detection of powerpc64 in centos 6
-# kBuild/src/lib/kStuff/include/k/kDefs.h:356:4: error: #error "Port Me or define K_ENDIAN."
-# hack for gcc < 4.6 and ppc64 only
-# https://stackoverflow.com/a/40675229/778517
-%patch -P 8 -p1 -b .portme
-%endif
-%endif
-%patch -P 10 -p1 -b .portme3
-%patch -P 11 -p1 -b .eval_buffer
-%patch -P 12 -p1 -b .sed_implicit_decl
+%patch -P 2 -p1 -b .dummy_noreturn
+%patch -P 3 -p1 -b .portme3
 
 
 %build
