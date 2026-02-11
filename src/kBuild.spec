@@ -41,19 +41,19 @@ repository.
 %prep
 #%setup -q -n %{name}-%{version}%{?patchlevel:-%{patchlevel}}
 %setup -q -n %{name}
-%patch0 -p1 -b .escape
-%patch1 -p1 -b .pthreads
-%patch6 -p1 -b .dummy_noreturn
+%patch -P0 -p1 -b .escape
+%patch -P1 -p1 -b .pthreads
+%patch -P6 -p1 -b .dummy_noreturn
 %ifarch ppc64
 %if 0%{?rhel} && 0%{?rhel} < 7
 # Found the reason why compile fails in detection of powerpc64 in centos 6
 # kBuild/src/lib/kStuff/include/k/kDefs.h:356:4: error: #error "Port Me or define K_ENDIAN."
 # hack for gcc < 4.6 and ppc64 only
 # https://stackoverflow.com/a/40675229/778517
-%patch8 -p1 -b .portme
+%patch -P8 -p1 -b .portme
 %endif
 %endif
-%patch10 -p1 -b .portme3
+%patch -P10 -p1 -b .portme3
 
 
 %build
