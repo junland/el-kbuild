@@ -35,7 +35,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
 
     - name: Create workspace directory
       run: mkdir -vp ${{ env.BUILD_CONTEXT_DIR }}/{RPMS,SRPMS,SOURCES,SPECS,DEBUG_RPMS}
