@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         el_flavor: [rocky, alma]
-        el_version: [10]
+        el_version: [9, 10]
         spec_file: [kBuild.spec]
         include:
           - el_flavor: alma
