@@ -92,9 +92,9 @@ jobs:
         path: "${{ env.BUILD_CONTEXT_DIR }}/SRPMS/*.rpm"
         retention-days: 3
     
-    - name: Upload debuginfo RPM artifacts
+    - name: Upload debugsource RPM artifacts
       uses: actions/upload-artifact@v6
       with:
         name: rpm-debuginfo-pkgs-${{ matrix.el_flavor }}${{ matrix.el_version }}-${{ github.run_id }}-${{ github.run_attempt }}
-        path: "${{ env.BUILD_CONTEXT_DIR }}/DEBUG_RPMS/*debuginfo*.rpm"
+        path: "${{ env.BUILD_CONTEXT_DIR }}/DEBUG_RPMS/*debugsource*.rpm"
         retention-days: 3
